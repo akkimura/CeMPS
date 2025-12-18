@@ -1,0 +1,8 @@
+.DS_Store
+TAGS
+*.o
+*.sh
+*.org
+*.dSYM
+result
+simCeMPS
