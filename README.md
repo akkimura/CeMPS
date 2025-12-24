@@ -1,6 +1,6 @@
 # CeMPS: MPS program for C. elegans hydrodynamic simulation
 
-This is the code for [An interplay between cytoplasmic flow and cell morphology during cytokinesis simulated by the moving-particle semi-implicit method](https://doi.org/10.64898/2025.12.22.695877). This project is carried out in cooperation with Funahashi Lab. at Keio University and Kimura Lab. at the National Institute of Genetics.
+This is the code for [An interplay between cytoplasmic flow and cell morphology during cytokinesis simulated by the moving-particle semi-implicit method](https://doi.org/10.64898/2025.12.22.695877). This project is carried out in cooperation with [Funahashi Lab. at Keio University](https://fun.bio.keio.ac.jp) and [Kimura Lab. at the National Institute of Genetics](https://nig-cal.com/en/home-2/).
 
 <img src="images/sample.gif" alt="result" width="600"/>
 
