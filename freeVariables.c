@@ -7,10 +7,13 @@ void freeVariables(void){
   free(ParticleType);
   free(Position);
   free(Velocity);
+  free(VelocityBeforeViscosity);
   free(Viscosity_x);
   free(Viscosity_y);
   free(Viscosity_z);
   free(Pressure);
+  free(TruePressure);
+  free(TruePressureGrad);
   free(NumberDensity);
   free(BoundaryCondition);
   free(SourceTerm);

@@ -7,10 +7,13 @@ void mallocVariables(void){
   ParticleType = (int*)malloc(sizeof(int) * SIZE_OF_ARRAY);
   Position = (double*)malloc(sizeof(double) * 3 * SIZE_OF_ARRAY);
   Velocity = (double*)malloc(sizeof(double) * 3 * SIZE_OF_ARRAY);
+  VelocityBeforeViscosity = (double*)malloc(sizeof(double) * 3 * SIZE_OF_ARRAY);
   Viscosity_x = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
   Viscosity_y = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
   Viscosity_z = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
   Pressure = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
+  TruePressure = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
+  TruePressureGrad = (double*)malloc(sizeof(double) * 3 * SIZE_OF_ARRAY);
   NumberDensity = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
   BoundaryCondition = (int*)malloc(sizeof(int) * SIZE_OF_ARRAY);
   SourceTerm = (double*)malloc(sizeof(double) * SIZE_OF_ARRAY);
@@ -30,5 +33,12 @@ void mallocVariables(void){
   for(i=0; i<SIZE_OF_ARRAY; i++){
     ParticleType[i] = GHOST;
     Pressure[i] = 0.0;
+    TruePressure[i] = 0.0;
+    VelocityBeforeViscosity[i*3+X] = 0.0;
+    VelocityBeforeViscosity[i*3+Y] = 0.0;
+    VelocityBeforeViscosity[i*3+Z] = 0.0;
+    TruePressureGrad[i*3+X] = 0.0;
+    TruePressureGrad[i*3+Y] = 0.0;
+    TruePressureGrad[i*3+Z] = 0.0;
   }
 }

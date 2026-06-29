@@ -43,6 +43,13 @@ void writeData(void){
     fprintf(fp, "%.15lf\n", Pressure[i]);
   }
   fprintf(fp,"</DataArray>\n");
+
+  fprintf(fp, "<DataArray NumberOfComponents='1' type='Float32' Name='true_pressure' format='ascii'>\n");
+  for(int i=0; i<Num_of_Particles; i++){
+    fprintf(fp, "%.15lf\n", TruePressure[i]);
+  }
+  fprintf(fp,"</DataArray>\n");
+
   fprintf(fp,"</PointData>\n");
 
   fprintf(fp,"<Cells>\n");

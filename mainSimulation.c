@@ -27,6 +27,7 @@ void mainSimulation(void){
     calc_Spring_for3dim();
     printf("Start calc_Viscosity\n");
     calc_Viscosity();
+    calc_TruePressure();
     moveParticle(Time);
     checkValue(Time, iTimeStep, "moveParticle");
     collision();

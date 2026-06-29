@@ -7,6 +7,13 @@ static int solve_viscosity_component(double *source, double *result) {
 void calc_Viscosity(void){
   int iter_x, iter_y, iter_z;
   
+  #pragma omp parallel for
+  for(int i=0; i<Num_of_Particles; i++){
+    VelocityBeforeViscosity[i*3+X] = Velocity[i*3+X];
+    VelocityBeforeViscosity[i*3+Y] = Velocity[i*3+Y];
+    VelocityBeforeViscosity[i*3+Z] = Velocity[i*3+Z];
+  }
+
   calc_NumDens();
   set_BoundaryCondition();
   set_SourceTerm_4Viscosity();
